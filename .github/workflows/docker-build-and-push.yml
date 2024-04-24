@@ -1,9 +1,10 @@
 name: Docker Build and Push
 
 on:
+  schedule:
+    - cron: '27 1 * * *'
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   build-and-push:
